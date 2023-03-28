@@ -69,6 +69,7 @@
 									<td> No</td>
 									<td> Nama Barang</td>
 									<td style="width:10%;"> Jumlah</td>
+									<td style="width:10%;"> Harga Satuan</td>
 									<td style="width:20%;"> Total</td>
 									<td> Kasir</td>
 									<td> Aksi</td>
@@ -77,6 +78,7 @@
 							<tbody>
 								<?php $total_bayar=0; $no=1; $hasil_penjualan = $lihat -> penjualan();?>
 								<?php foreach($hasil_penjualan  as $isi){?>
+										<?php $harga_satuan = $isi['total'] / $isi['jumlah']?>
 								<tr>
 									<td><?php echo $no;?></td>
 									<td><?php echo $isi['nama_barang'];?></td>
@@ -87,6 +89,7 @@
 												<input type="hidden" name="id" value="<?php echo $isi['id_penjualan'];?>" class="form-control">
 												<input type="hidden" name="id_barang" value="<?php echo $isi['id_barang'];?>" class="form-control">
 											</td>
+											<td>Rp.<?php echo $harga_satuan?>,-</td>
 											<td>Rp.<?php echo number_format($isi['total']);?>,-</td>
 											<td><?php echo $isi['nm_member'];?></td>
 											<td>
@@ -164,7 +167,7 @@
 								<?php $no++; }?>
 								<tr>
 									<td>Total Semua  </td>
-									<td><input type="text" class="form-control" name="total" value="<?php echo $total_bayar;?>"></td>
+									<td><input type="text" class="form-control" disabled name="total" value="<?php echo $total_bayar;?>"></td>
 								
 									<td>Bayar  </td>
 									<td><input type="text" class="form-control" name="bayar" value="<?php echo $bayar;?>"></td>
@@ -177,7 +180,7 @@
 							<!-- aksi ke table nota -->
 							<tr>
 								<td>Kembali</td>
-								<td><input type="text" class="form-control" value="<?php echo $hitung;?>"></td>
+								<td><input type="text" disabled class="form-control" value="<?php echo $hitung;?>"></td>
 								<td></td>
 								<td>
 									<a href="print.php?nm_member=<?php echo $_SESSION['admin']['nm_member'];?>
