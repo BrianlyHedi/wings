@@ -1,7 +1,7 @@
 Login
 
-Username : brianly
-Password : password
+- Username : brianly
+- Password : password
 
 Installasi : 
 Jika menggunakan laragon, clone git di folder baru pada route laragon/www/namafolder
