@@ -201,10 +201,7 @@ if ($r > 0) {
 						<tr>
 							<td>Satuan Barang</td>
 							<td>
-								<select name="satuan" class="form-control" required>
-									<option value="#">Pilih Satuan</option>
-									<option value="PCS">PCS</option>
-								</select>
+								<input type="text" name="satuan" class="form-control" required placeholder="Satuan Barang">
 							</td>
 						</tr>
 						<tr>

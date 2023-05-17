@@ -15,28 +15,7 @@ $hasil = $lihat->member_edit($id);
 	</div>
 <?php } ?>
 <div class="row">
-	<div class="col-sm-3">
-		<div class="card card-info">
-			<div class="card-header">
-				<h5 class="mt-2"><i class="fa fa-user"></i> Foto Pengguna </h5>
-			</div>
-			<div class="card-body">
-				<img src="assets/img/user/<?php echo $hasil['gambar']; ?>" alt="#" class="img-fluid w-100"/>
-			</div>
-			<div class="card-footer">
-				<form method="POST" action="fungsi/edit/edit.php?gambar=user" enctype="multipart/form-data">
-					<input type="file" accept="image/*" name="foto">
-					<input type="hidden" value="<?php echo $hasil['gambar']; ?>" name="foto2">
-					<input type="hidden" name="id" value="<?php echo $hasil['id_member']; ?>">
-					<br><br>
-					<button type="submit" class="btn btn-info btn-md" value="Tambah">
-						<i class="fas fa-edit mr-1"></i> Ganti Foto
-					</button>
-				</form>
-			</div>
-		</div>
-	</div>
-	<div class="col-sm-5">
+	<div class="col-sm-6">
 		<div class="card card-info">
 			<div class="card-header">
 				<h5 class="mt-2"><i class="fa fa-user"></i> Kelola Pengguna </h5>
@@ -92,7 +71,7 @@ $hasil = $lihat->member_edit($id);
 			</div>
 		</div>
 	</div>
-	<div class="col-sm-4">
+	<div class="col-sm-6">
 		<div class="card card-info">
 			<div class="card-header">
 				<h5 class="mt-2"><i class="fa fa-lock"></i> Ganti Password</h5>

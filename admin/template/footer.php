@@ -4,7 +4,7 @@
 	<div class="container my-auto">
 		<div class="copyright text-center my-auto">
                 <span>
-                    <?php echo date('Y'); ?> - Penjualan Barang <i style="font-size:10px" class="fa">&#xf004;</i>
+                    <?php echo date('Y'); ?> - Test Penjualan Brianly
                 </span>
 		</div>
 	</div>

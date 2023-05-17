@@ -116,10 +116,10 @@ $hasil = $lihat->member_edit($id);
 							<?php
 							// proses bayar dan ke nota
 							if (!empty($_GET['nota'] == 'yes')) {
-								$total = $_POST['total'];
+								$total += $isi['total'];
 								$bayar = $_POST['bayar'];
 								if (!empty($bayar)) {
-									$hitung = $bayar - $total;
+									$hitung = $total - $bayar;
 									if ($bayar >= $total) {
 										$id_barang = $_POST['id_barang'];
 										$id_member = $_POST['id_member'];
@@ -153,7 +153,7 @@ $hasil = $lihat->member_edit($id);
 										}
 										echo '<script>alert("Belanjaan Berhasil Di Bayar !");</script>';
 									} else {
-										echo '<script>alert("Uang Kurang ! Rp.' . $hitung . '");</script>';
+										echo '<script>alert("Uang Kurang Rp.' . $hitung . ' !");</script>';
 									}
 								}
 							}
@@ -191,12 +191,12 @@ $hasil = $lihat->member_edit($id);
 							<!-- aksi ke table nota -->
 							<tr>
 								<td>Kembali</td>
-								<td><input type="text" disabled class="form-control" value="<?php echo $hitung; ?>">
+								<td><input type="text" disabled class="form-control" value="<?php echo $bayar - $total_bayar; ?>">
 								</td>
 								<td></td>
 								<td>
 									<a href="print.php?nm_member=<?php echo $_SESSION['admin']['nm_member']; ?>
-									&bayar=<?php echo $bayar; ?>&kembali=<?php echo $hitung; ?>" target="_blank">
+									&bayar=<?php echo $bayar; ?>&kembali=<?php echo $bayar - $total_bayar; ?>" target="_blank">
 										<button class="btn btn-secondary">
 											<i class="fa fa-print"></i> Print Untuk Bukti Pembayaran
 										</button>

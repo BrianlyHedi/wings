@@ -59,12 +59,7 @@ $hasil = $lihat->barang_edit($id);
 				<tr>
 					<td>Satuan Barang</td>
 					<td>
-						<select name="satuan" class="form-control">
-							<option value="<?php echo $hasil['satuan_barang']; ?>"><?php echo $hasil['satuan_barang']; ?>
-							</option>
-							<option value="#">Pilih Satuan</option>
-							<option value="PCS">PCS</option>
-						</select>
+						<input type="text" class="form-control" placeholder="Satuan Barang" name="satuan"  value="<?php echo $hasil['satuan_barang']; ?>">
 					</td>
 				</tr>
 				<tr>

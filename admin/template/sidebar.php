@@ -48,13 +48,6 @@ $hasil_profil = $lihat->member_edit($id);
 			</div>
 		</div>
 	</li>
-	<hr class="sidebar-divider">
-	<li class="nav-item active">
-		<a class="nav-link" href="index.php?page=pengaturan">
-			<i class="fas fa-fw fa-cogs"></i>
-			<span>Pengaturan Toko</span></a>
-	</li>
-	<hr class="sidebar-divider d-none d-md-block">
 
 	<div class="text-center d-none d-md-inline">
 		<button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -77,8 +70,6 @@ $hasil_profil = $lihat->member_edit($id);
 				<li class="nav-item dropdown no-arrow">
 					<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
 					   aria-haspopup="true" aria-expanded="false">
-						<img class="img-profile rounded-circle"
-							 src="assets/img/user/<?php echo $hasil_profil['gambar']; ?>">
 						<span
 								class="mr-2 d-none d-lg-inline text-gray-600 small ml-2"><?php echo $hasil_profil['nm_member']; ?></span>
 						<i class="fas fa-angle-down"></i>
