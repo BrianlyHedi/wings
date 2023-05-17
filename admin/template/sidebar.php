@@ -63,8 +63,7 @@ $hasil_profil = $lihat->member_edit($id);
 			<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
 				<i class="fa fa-bars"></i>
 			</button>
-			<h5 class="d-lg-block d-none mt-2"><b><?php echo $toko['nama_toko']; ?>
-					, <?php echo $toko['alamat_toko']; ?></b></h5>
+			<h5 class="d-lg-block d-none mt-2"><b>Wings</b></h5>
 
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item dropdown no-arrow">

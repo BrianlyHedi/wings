@@ -17,8 +17,7 @@ $hsl = $lihat->penjualan();
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4">
 			<center>
-				<p><?php echo $toko['nama_toko']; ?></p>
-				<p><?php echo $toko['alamat_toko']; ?></p>
+				<p>Toko Brian</p>
 				<p>Tanggal : <?php echo date("j F Y, G:i"); ?></p>
 				<p>Kasir : <?php echo $_GET['nm_member']; ?></p>
 			</center>
