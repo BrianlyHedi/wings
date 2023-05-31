@@ -55,7 +55,7 @@ if (isset($_POST['proses'])) {
 						<form class="form-login" method="POST">
 							<div class="form-group">
 								<input type="text" class="form-control form-control-user" name="user"
-									   placeholder="User ID" autofocus>
+									   placeholder="Username" autofocus>
 							</div>
 							<div class="form-group">
 								<input type="password" class="form-control form-control-user" name="pass"
